@@ -17,8 +17,9 @@ public class GenreController {
         HttpHeaders headers = new HttpHeaders();
         headers.add("x-rapidapi-host", "streaming-availability.p.rapidapi.com");
         headers.add("x-rapidapi-key", "f4bb25fad4mshd060cc1d877c8f2p1bc525jsn89de5522868a");
-        headers.add("Access-Control-Allow-Origin", "http://localhost:4200");
-
+        headers.add("Access-Control-Allow-Origin", "*");
+        header.add("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE");
+        header.add("Access-Control-Allow-Headers", "Origin, Content-Type, Accept, Authorization, X-Request-With");
         HttpEntity request = new HttpEntity(headers);
 
         ResponseEntity<String> response = new RestTemplate().exchange(seriesUrl, HttpMethod.GET, request, String.class);
