@@ -17,6 +17,7 @@ public class GenreController {
         HttpHeaders headers = new HttpHeaders();
         headers.add("x-rapidapi-host", "streaming-availability.p.rapidapi.com");
         headers.add("x-rapidapi-key", "f4bb25fad4mshd060cc1d877c8f2p1bc525jsn89de5522868a");
+        headers.add("Access-Control-Allow-Origin", "http://localhost:4200");
 
         HttpEntity request = new HttpEntity(headers);
 
